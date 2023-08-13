@@ -12,14 +12,14 @@ import org.apache.pdfbox.rendering.PDFRenderer;
 
 public class PdfToImages {
     public static void main(String[] args) throws IOException {
-        File file = new File("E:\\购房材料\\收入证明.pdf");
+        File file = new File("/home/jiangjie/文档/保险计划书/百年康惠保重大疾病保险条款.pdf");
         PDDocument document = PDDocument.load(file);
-
-        PDFRenderer renderer = new PDFRenderer(document);
-        BufferedImage image = renderer.renderImage(0);
-
-        ImageIO.write(image, "JPEG", new File("E:\\购房材料\\收入证明.jpg"));
-
-        document.close();
+        System.out.println("document pages:" + document.getPages().getCount());
+//        PDFRenderer renderer = new PDFRenderer(document);
+//        BufferedImage image = renderer.renderImage(0);
+//
+//        ImageIO.write(image, "JPEG", new File("/home/jiangjie/文档/保险计划书/test.jpg"));
+//
+//        document.close();
     }
 }
